@@ -15,6 +15,7 @@ p.tags {
 
 h1 {
     font-size: var(--font-size-h1);
+    font-family: var(--font-primary);
     margin: 0;
     font-weight: 800;
 
@@ -22,6 +23,7 @@ h1 {
         font-family: var(--font-primary);
         font-size: var(--font-size-display);
         font-weight: 800;
+        text-transform: uppercase;
     }
 }
 
