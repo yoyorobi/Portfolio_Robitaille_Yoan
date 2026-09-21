@@ -9,8 +9,11 @@ html {
 
 body {
     background: var(--color-bg-primary);
-    color: var(--color-black);
-    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    font-family: var(--font-tertiary);
     font-size: var(--font-size-content);
-    line-height: 150%;
+    line-height: auto;
+    p {
+        margin: 0;
+    }
 }
