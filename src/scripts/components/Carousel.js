@@ -7,7 +7,6 @@ export default class Carousel {
   }
   init() {
     const swiper = new Swiper(this.element, {
-      direction: 'vertical',
       pagination: {
         el: '.swiper-pagination',
       },

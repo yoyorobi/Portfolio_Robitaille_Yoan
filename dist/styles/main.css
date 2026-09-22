@@ -1667,4 +1667,157 @@ a.disabled {
   align-items: center;
   gap: 20px;
 }
+
+.projet_hero {
+  padding-bottom: 50px;
+}
+.projet_hero .head {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.projet_hero .tag {
+  color: var(--color-secondary);
+  padding: 7px 30px;
+  border-top: 2px var(--color-primary) solid;
+  border-left: 2px var(--color-primary) solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.info {
+  padding: 50px 0;
+}
+.info .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.info h3 {
+  text-transform: uppercase;
+}
+.info .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info .left {
+  max-width: 650px;
+}
+.info .right {
+  max-width: 550px;
+}
+.info .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.info .card .imgs {
+  display: flex;
+  gap: 10px;
+}
+
+.presentation {
+  padding: 50px 0;
+  display: flex;
+}
+.presentation img {
+  border: 2px solid var(--color-border);
+}
+
+.etapes {
+  padding: 50px 0;
+}
+.etapes .card {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.etapes span {
+  font-weight: 800;
+}
+.etapes .interieur {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.etapes .left {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.etapes .interieur2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.etapes .left2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.etapes .left2 .desc {
+  width: 50%;
+}
+.etapes .left2 .tags {
+  flex-direction: row;
+}
+.etapes .left2 .tags .tag {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.etapes .desc {
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding: 20px 20px;
+}
+.etapes .tags {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.etapes .tags .tag {
+  border-top: 2px solid var(--color-secondary);
+  border-left: 2px solid var(--color-secondary);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+}
+.etapes .gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.etapes .swiper {
+  width: 1000px;
+  height: 100%;
+}
+
+.final {
+  padding: 50px 0;
+}
+.final .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.final .resultat {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.final .resultat img {
+  border: 2px solid var(--color-border);
+}
+.final .retour {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--color-secondary);
+}
+.final .retour h3 {
+  color: var(--color-secondary);
+  font-size: 32px;
+  font-weight: 500;
+}
 /*# sourceMappingURL=main.css.map */
