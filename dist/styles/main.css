@@ -1646,6 +1646,30 @@ a.disabled {
   border-left: 2px var(--color-primary) solid;
 }
 
+.gallery {
+  padding: 50px 0;
+}
+.gallery .gallerie1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr;
+  gap: 20px;
+}
+.gallery .gallerie1 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.gallery .gallerie1 img {
+  height: 257.57px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery .gallerie2 {
+  margin-top: 20px;
+  grid-template-columns: 2fr 1.5fr 1fr;
+}
+
 .projets {
   padding: 100px 0;
 }
