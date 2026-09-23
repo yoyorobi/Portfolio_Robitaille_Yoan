@@ -24,8 +24,13 @@
     }
 }
 
-.video {
+.presentation_video {
     padding: 100px 0;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .competence {
