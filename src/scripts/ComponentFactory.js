@@ -2,6 +2,7 @@ import Carousel from './components/Carousel.js';
 import Scrolly from './components/Scrolly.js';
 import Youtube from './components/Youtube.js';
 import Cursor from './components/Cursor.js';
+import Scroller from './components/Scroller.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -10,6 +11,7 @@ export default class ComponentFactory {
       Carousel,
       Youtube,
       Cursor,
+      Scroller,
     };
     this.init();
   }

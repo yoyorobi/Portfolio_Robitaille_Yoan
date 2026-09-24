@@ -12,6 +12,8 @@
 </head>
 
 <body data-component="Scrolly">
+    <div class="cursor" data-component="Cursor"></div>
+
 
     <header class="header">
         <div class="wrapper">
@@ -32,133 +34,136 @@
         </div>
         <hr class="hr_secondary">
     </header>
-    <!-- Hub -->
-    <section class="hub">
-        <div class="wrapper">
-            <h1 class="display">Yoan Robitaille</h1>
-            <div class="hub_contenu">
-                <div class="contenu">
-                    <div class="profil">
-                        <h2>Dev média intéractif</h2>
-                        <h2>Dev web</h2>
+    <div id="smooth-wrapper" data-component="Scroller" data-pin-items="true">
+        <div id="smooth-content">
+            <!-- Hub -->
+            <section class="hub">
+                <div class="wrapper">
+                    <h1 class="display">Yoan Robitaille</h1>
+                    <div class="hub_contenu">
+                        <div class="contenu">
+                            <div class="profil">
+                                <h2>Dev média intéractif</h2>
+                                <h2>Dev web</h2>
+                            </div>
+                            <h3>Je transforme une idée en expérience interactive qui marche, du design jusqu'à l'intégration.</h3>
+                            <a href="index.html#projets" class="btn">
+                                Voir mes projets
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-Arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="media">
+                            <img src="assets/img/yoan.png" alt="Yoan Robitaille" />
+                        </div>
                     </div>
-                    <h3>Je transforme une idée en expérience interactive qui marche, du design jusqu'à l'intégration.</h3>
-                    <a href="index.html#projets" class="btn">
-                        Voir mes projets
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-Arrow"></use>
-                        </svg>
-                    </a>
                 </div>
-                <div class="media">
-                    <img src="assets/img/yoan.png" alt="Yoan Robitaille" />
+            </section>
+            <hr class="hr_primary" />
+
+            <section class="projets" id="projets">
+                <div class="wrapper">
+                    <h1>Mes projets à ce jour</h1>
+
+                    <div class="cards">
+                        <a href="fiche_projet.html" class="card">
+                            <div class="start">
+                                <h2>01</h2>
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                <h2>Horloge non conventionnelle en direct</h2>
+                            </div>
+                            <p>Intéractif</p>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="start">
+                                <h2>02</h2>
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                <h2>Projection murale intéractive avec une Kinect</h2>
+                            </div>
+                            <p>Intéractif</p>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="start">
+                                <h2>03</h2>
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                <h2>Design et intégration “onepager” d’un site de vente</h2>
+                            </div>
+                            <p>Dev web</p>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="start">
+                                <h2>04</h2>
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                <h2>Jeu 1D sur bande DEL</h2>
+                            </div>
+                            <p>Intéractif</p>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="start">
+                                <h2>05</h2>
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                <h2>Design, amélioration et intégration du site web Boxotel</h2>
+                            </div>
+                            <p>Dev web</p>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <hr class="hr_primary" />
+            <footer class="footer">
+                <div class="wrapper">
+                    <h2>On travaille ensemble? <span class="h2_footer">Je cherche un stage en création interactive.</span></h2>
+                    <ul class="socials">
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[in]</div>
+                                <div class="nom">LinkedIn</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[gh]</div>
+                                <div class="nom">GitHub</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[yt]</div>
+                                <div class="nom">YouTube</div>
+                            </li>
+                        </a>
+                        <a href="mailto:yoan.robitaille@hotmail.com">
+                            <li class="social">
+                                <div class="social_icon">[@]</div>
+                                <div class="nom">E-mail</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[cv]</div>
+                                <div class="nom">Curriculum vitae</div>
+                            </li>
+                        </a>
+                    </ul>
+                    <div class="credit">
+                        <p>© 2026 Yoan Robitaille</p>
+                        <p class="mini">Ce site a été conçu avec l'aide d'outils d'intelligence artificielle pour l’idéation visuelle et la rédaction en partie.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </section>
-    <hr class="hr_primary" />
-
-    <section class="projets" id="projets">
-        <div class="wrapper">
-            <h1>Mes projets à ce jour</h1>
-
-            <div class="cards">
-                <a href="fiche_projet.html" class="card">
-                    <div class="start">
-                        <h2>01</h2>
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-square"></use>
-                        </svg>
-                        <h2>Horloge non conventionnelle en direct</h2>
-                    </div>
-                    <p>Intéractif</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="start">
-                        <h2>02</h2>
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-square"></use>
-                        </svg>
-                        <h2>Projection murale intéractive avec une Kinect</h2>
-                    </div>
-                    <p>Intéractif</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="start">
-                        <h2>03</h2>
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-square"></use>
-                        </svg>
-                        <h2>Design et intégration “onepager” d’un site de vente</h2>
-                    </div>
-                    <p>Dev web</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="start">
-                        <h2>04</h2>
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-square"></use>
-                        </svg>
-                        <h2>Jeu 1D sur bande DEL</h2>
-                    </div>
-                    <p>Intéractif</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="start">
-                        <h2>05</h2>
-                        <svg class="icon icon--sm">
-                            <use xlink:href="#icon-square"></use>
-                        </svg>
-                        <h2>Design, amélioration et intégration du site web Boxotel</h2>
-                    </div>
-                    <p>Dev web</p>
-                </a>
-            </div>
-        </div>
-    </section>
-    <hr class="hr_primary" />
-    <footer class="footer">
-        <div class="wrapper">
-            <h2>On travaille ensemble? <span class="h2_footer">Je cherche un stage en création interactive.</span></h2>
-            <ul class="socials">
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[in]</div>
-                        <div class="nom">LinkedIn</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[gh]</div>
-                        <div class="nom">GitHub</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[yt]</div>
-                        <div class="nom">YouTube</div>
-                    </li>
-                </a>
-                <a href="mailto:yoan.robitaille@hotmail.com">
-                    <li class="social">
-                        <div class="social_icon">[@]</div>
-                        <div class="nom">E-mail</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[cv]</div>
-                        <div class="nom">Curriculum vitae</div>
-                    </li>
-                </a>
-            </ul>
-            <div class="credit">
-                <p>© 2026 Yoan Robitaille</p>
-                <p class="mini">Ce site a été conçu avec l'aide d'outils d'intelligence artificielle pour l’idéation visuelle et la rédaction en partie.</p>
-            </div>
-        </div>
-    </footer>
-
+    </div>
 
 </body>
 
