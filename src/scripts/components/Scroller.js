@@ -37,6 +37,10 @@ export default class Scroller {
         markers: true,
       });
     }
+    // projets.addEventListenener('click')
+    // https://gsap.com/community/forums/topic/31740-scrollsmoother-with-jump-links-does-not-work/
+    // https://gsap.com/docs/v3/Plugins/ScrollToPlugin/
+    // https://gsap.com/docs/v3/Plugins/ScrollSmoother/scrollTo()/
   }
 
   /*initHoriz() {
