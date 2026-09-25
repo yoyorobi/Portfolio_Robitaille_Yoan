@@ -3,6 +3,7 @@ import Scrolly from './components/Scrolly.js';
 import Youtube from './components/Youtube.js';
 import Cursor from './components/Cursor.js';
 import Scroller from './components/Scroller.js';
+import Modale from './components/Modale.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -12,6 +13,7 @@ export default class ComponentFactory {
       Youtube,
       Cursor,
       Scroller,
+      Modale,
     };
     this.init();
   }

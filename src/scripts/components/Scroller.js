@@ -1,10 +1,11 @@
 import { gsap } from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 
 export default class Scroller {
   constructor(element) {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     this.options = {
       hasPinItems: false,
     };
@@ -13,13 +14,45 @@ export default class Scroller {
     this.init();
   }
   init() {
-    const scroller = ScrollSmoother.create({
+    this.scroller = ScrollSmoother.create({
       smooth: 1.5,
       effects: true,
       smoothTouch: 0.3,
-      //   onUpdate: this.onUpdateScroll.bind(this),
-      //   onStop: this.onStopScroll.bind(this),
+
       ease: 'expo.out',
+    });
+    const scrollBtn = document
+      .querySelectorAll('.scrollto')
+      .forEach((scrollBtn) => {
+        scrollBtn.addEventListener('click', this.initScrollTo.bind(this));
+      });
+
+    this.handleInitialHash();
+  }
+
+  initScrollTo(e) {
+    console.log('coucou');
+    e.preventDefault();
+    const target = document.querySelector('#projets');
+    if (target) {
+      this.scroller.scrollTo('#projets', true, 'top top');
+    } else {
+      window.location.href = '/index.html#projets';
+    }
+  }
+
+  handleInitialHash() {
+    const hash = window.location.hash;
+    if (!hash || hash === '#') return;
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const target = document.querySelector(hash);
+        if (!target) {
+          return;
+        }
+        ScrollTrigger.refresh();
+        this.scroller.scrollTo(hash, true, 'top top');
+      }, 500);
     });
   }
 
@@ -33,14 +66,10 @@ export default class Scroller {
         trigger: pinnedItem.parentElement,
         pinSpacing: false,
         start: '0 10%',
-        end: '90% center',
+        end: '90% 70%',
         markers: true,
       });
     }
-    // projets.addEventListenener('click')
-    // https://gsap.com/community/forums/topic/31740-scrollsmoother-with-jump-links-does-not-work/
-    // https://gsap.com/docs/v3/Plugins/ScrollToPlugin/
-    // https://gsap.com/docs/v3/Plugins/ScrollSmoother/scrollTo()/
   }
 
   /*initHoriz() {
@@ -69,8 +98,8 @@ export default class Scroller {
       console.log('test');
       this.initPins();
     }
-    if (this.element.querySelector('.js-horiz')) {
-      this.initHoriz();
-    }
+    // if (this.element.querySelector('.js-horiz')) {
+    //   this.initHoriz();
+    // }
   }
 }
