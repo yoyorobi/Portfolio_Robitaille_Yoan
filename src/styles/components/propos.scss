@@ -5,22 +5,48 @@
 
 .hero {
     padding: 100px 0;
+    @media (width <= $breakpoint-md) {
+        padding: 70px 0 24px;
+    }
     .wrapper {
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         justify-items: end;
+        @media (width <= $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
         .contenu {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @media (width <= $breakpoint-md) {
+                justify-content: unset;
+                gap: 15px;
+            }
             span {
                 font-weight: 800;
+            }
+            .media.mobile {
+                display: none;
+                @media (width <= $breakpoint-md) {
+                    display: block;
+                }
+                @media (width <= $breakpoint-sm) {
+                    width: 358px;
+                    height: 374px;
+                }
             }
         }
         .media {
             height: 502px;
             width: 486px;
+            &.desktop {
+                @media (width <= $breakpoint-md) {
+                    display: none;
+                }
+            }
         }
+
         img {
             height: 100%;
             width: 100%;

@@ -12,6 +12,14 @@
             display: flex;
             justify-content: space-between;
             padding: 0;
+            @media (width <= $breakpoint-md) {
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 15px;
+            }
+            @media (width <= $breakpoint-xs) {
+                flex-direction: column;
+            }
             li {
                 list-style-type: none;
                 display: flex;
@@ -20,6 +28,9 @@
                 font-weight: 500;
                 border-bottom: var(--color-border) 3px solid;
                 padding: 10px 20px;
+                @media (width <= $breakpoint-sm) {
+                    width: fit-content;
+                }
             }
         }
         .credit {

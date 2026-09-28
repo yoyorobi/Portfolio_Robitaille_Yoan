@@ -17,6 +17,10 @@
 
 .hub {
     padding-top: 100px;
+    @media (width <= $breakpoint-md) {
+        padding-bottom: 24px;
+        padding-top: 70px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -27,10 +31,19 @@
         grid-template-columns: 1fr 1fr;
         justify-items: end;
         gap: 70px;
+        @media (width<= $breakpoint-md) {
+            grid-template-columns: 1fr;
+            justify-items: initial;
+            gap: 10px;
+        }
         .contenu {
             display: flex;
             flex-direction: column;
             gap: 50px;
+            @media (width <= $breakpoint-xs) {
+                width: 390px;
+                gap: 20px;
+            }
         }
         .btn {
             font-size: 32px;
@@ -44,11 +57,18 @@
         .media {
             width: 426px;
             height: 426px;
+            @media (width<= $breakpoint-md) {
+                order: -1;
+                width: 358px;
+                height: 358px;
+            }
         }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @media (width<= $breakpoint-xs) {
+            }
         }
     }
 }

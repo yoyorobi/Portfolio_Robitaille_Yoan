@@ -17,7 +17,7 @@ export default class Scroller {
     this.scroller = ScrollSmoother.create({
       smooth: 1.5,
       effects: true,
-      smoothTouch: 0.3,
+      smoothTouch: 0.1,
 
       ease: 'expo.out',
     });

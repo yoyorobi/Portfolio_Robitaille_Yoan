@@ -13,6 +13,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 10vh;
     }
     .logo {
         font-family: var(--font-primary);
@@ -23,12 +24,16 @@
     ul {
         display: flex;
         gap: 40px;
+
         li {
             list-style-type: none;
             border-bottom: var(--color-primary) 1px solid;
             padding-bottom: 2px;
             font-size: 20px;
             font-weight: 500;
+        }
+        @media (width<= $breakpoint-md) {
+            display: none;
         }
     }
 }
