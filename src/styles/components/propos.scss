@@ -102,6 +102,14 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 100px;
+        @media (width <= $breakpoint-md) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        @media (width <= $breakpoint-sm) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
 
         .tech,
         .lang {
@@ -116,6 +124,10 @@
             grid-template-columns: 1fr 1fr;
             row-gap: 40px;
             column-gap: 30px;
+            @media (width <= $breakpoint-sm) {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
         }
         .skill {
             margin-bottom: 24px;
@@ -151,6 +163,15 @@
             display: flex;
             justify-content: space-between;
             padding: 0 100px;
+            @media (width <= $breakpoint-md) {
+                padding: 0 50px;
+            }
+            @media (width <= $breakpoint-sm) {
+                padding: 0;
+                justify-content: unset;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
@@ -168,14 +189,30 @@
             flex-direction: column;
             width: 100%;
             gap: 33px;
+            @media (width <= $breakpoint-md) {
+            }
         }
         .haut {
             display: flex;
             gap: 150px;
+            @media (width <= $breakpoint-md) {
+                gap: 70px;
+                row-gap: 30px;
+            }
+            @media (width <= $breakpoint-sm) {
+                flex-wrap: wrap;
+            }
         }
         .bas {
             display: flex;
             gap: 96px;
+            @media (width <= $breakpoint-md) {
+                gap: 70px;
+                row-gap: 30px;
+            }
+            @media (width <= $breakpoint-sm) {
+                flex-wrap: wrap;
+            }
         }
         p {
             color: var(--color-secondary);
@@ -190,11 +227,33 @@
 ======== GALLERIE PHOTO ===========
 ====================================================================================================================================*/
 
+// .gallery {
+//     padding: 50px 0;
+//     .gallerie1 {
+//         display: grid;
+//         grid-template-columns: 1fr 2fr 1.5fr;
+//         gap: 20px;
+//         .card {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 5px;
+//         }
+//         img {
+//             height: 257.57px;
+//             width: 100%;
+//             object-fit: cover;
+//         }
+//     }
+//     .gallerie2 {
+//         margin-top: 20px;
+//         grid-template-columns: 2fr 1.5fr 1fr;
+//     }
+// }
 .gallery {
     padding: 50px 0;
     .gallerie1 {
         display: grid;
-        grid-template-columns: 1fr 2fr 1.5fr;
+        grid-template-columns: repeat(9, 1fr);
         gap: 20px;
         .card {
             display: flex;
@@ -206,9 +265,54 @@
             width: 100%;
             object-fit: cover;
         }
+        .card:nth-child(1) {
+            grid-column: span 2;
+        }
+        .card:nth-child(2) {
+            grid-column: span 4;
+        }
+        .card:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        // Ligne 2 — 2fr / 1.5fr / 1fr → span 4 / 3 / 2
+        .card:nth-child(4) {
+            grid-column: span 4;
+        }
+        .card:nth-child(5) {
+            grid-column: span 3;
+        }
+        .card:nth-child(6) {
+            grid-column: span 2;
+        }
     }
-    .gallerie2 {
-        margin-top: 20px;
-        grid-template-columns: 2fr 1.5fr 1fr;
+    @media (width <= $breakpoint-lg) {
+        .gallerie1 {
+            grid-template-columns: 1fr 1fr;
+            .card {
+                grid-column: span 1 !important;
+            }
+        }
+        img {
+            height: 220px;
+        }
+    }
+    @media (width <= $breakpoint-sm) {
+        .wrapper {
+            all: unset;
+            h2 {
+                padding: 0 16px;
+                margin-bottom: 20px;
+            }
+        }
+        .gallerie1 {
+            grid-template-columns: 1fr;
+            .card {
+                grid-column: span 1 !important;
+            }
+        }
+        img {
+            height: 240px;
+        }
     }
 }
