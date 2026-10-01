@@ -6,6 +6,7 @@ import Scroller from './components/Scroller.js';
 import Modale from './components/Modale.js';
 // import Form from './components/Form.js';
 import Grid from './components/Grid.js';
+import ImgHover from './components/ImgHover.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -18,6 +19,7 @@ export default class ComponentFactory {
       Modale,
       // Form,
       Grid,
+      ImgHover,
     };
     this.init();
   }

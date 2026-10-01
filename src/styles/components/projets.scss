@@ -34,3 +34,17 @@
         }
     }
 }
+
+img.swipeimage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
