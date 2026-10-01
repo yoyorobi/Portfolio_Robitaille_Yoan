@@ -4,6 +4,8 @@ import Youtube from './components/Youtube.js';
 import Cursor from './components/Cursor.js';
 import Scroller from './components/Scroller.js';
 import Modale from './components/Modale.js';
+// import Form from './components/Form.js';
+import Grid from './components/Grid.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -14,6 +16,8 @@ export default class ComponentFactory {
       Cursor,
       Scroller,
       Modale,
+      // Form,
+      Grid,
     };
     this.init();
   }
