@@ -40,7 +40,7 @@ img.swipeimage {
     top: 0;
     left: 0;
     width: 350px;
-    height: 350px;
+    height: fit-content;
     object-fit: cover;
     transform: translateX(-50%) translateY(-50%);
     z-index: 9;

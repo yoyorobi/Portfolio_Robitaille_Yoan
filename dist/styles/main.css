@@ -1950,7 +1950,8 @@ img.swipeimage {
   top: 0;
   left: 0;
   width: 350px;
-  height: 350px;
+  height: -moz-fit-content;
+  height: fit-content;
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateX(-50%) translateY(-50%);

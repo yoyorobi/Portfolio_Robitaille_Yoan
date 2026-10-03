@@ -7,11 +7,11 @@ export default class Grid {
     console.log('grid');
     this.grid = createCursorGrid(this.element, {
       color: '#f0997b', // couleur des cellules allumées
-      cellSize: 65, // taille d'une cellule (px)
+      cellSize: 45, // taille d'une cellule (px)
       radius: 130, // rayon d'influence du curseur (px)
       lineWidth: 1.3, // épaisseur des traits
       holdTime: 100, // temps (ms) où une cellule reste allumée avant de s'éteindre
-      fadeDuration: 550, // durée (ms) du fondu de sortie
+      fadeDuration: 350, // durée (ms) du fondu de sortie
       clickPulse: false, // onde au clic
       pulseSpeed: 450, // vitesse de l'onde (px/s)
       fillOpacity: 0, // léger remplissage des cellules (0 = aucun)
@@ -21,14 +21,14 @@ export default class Grid {
 function createCursorGrid(canvas, options = {}) {
   const opts = {
     color: '#f0997b', // couleur des cellules allumées
-    cellSize: 65, // taille d'une cellule (px)
+    cellSize: 45, // taille d'une cellule (px)
     radius: 130, // rayon d'influence du curseur (px)
     lineWidth: 1.3, // épaisseur des traits
     holdTime: 100, // temps (ms) où une cellule reste allumée avant de s'éteindre
-    fadeDuration: 550, // durée (ms) du fondu de sortie
+    fadeDuration: 350, // durée (ms) du fondu de sortie
     clickPulse: false, // onde au clic
     pulseSpeed: 450, // vitesse de l'onde (px/s)
-    fillOpacity: 0.06, // léger remplissage des cellules (0 = aucun)
+    fillOpacity: 0.0, // léger remplissage des cellules (0 = aucun)
     ...options,
   };
 
