@@ -2162,7 +2162,7 @@ img.swipeimage {
 }
 
 /*====================================================================================================================================
-======== ÉTAPES ===========
+======== ÉTAPES ET SWIPER ===========
 ====================================================================================================================================*/
 .etapes {
   padding: 50px 0;
@@ -2228,9 +2228,33 @@ img.swipeimage {
   flex-direction: column;
   gap: 10px;
 }
+.etapes video {
+  max-width: 584px;
+  max-height: 326px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .etapes .swiper {
   width: 1000px;
   height: 100%;
+}
+.etapes .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination-fraction {
+  top: 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 92%;
+  font-size: 25px;
+  color: var(--color-secondary);
+  text-shadow: var(--color-bg-secondary) 0 0 5px;
 }
 
 /*====================================================================================================================================
@@ -2472,11 +2496,13 @@ img.swipeimage {
 }
 .input__element::-moz-placeholder {
   color: var(--color-primary);
-  opacity: 75%;
+  opacity: 50%;
+  font-size: 15px;
 }
 .input__element::placeholder {
   color: var(--color-primary);
-  opacity: 75%;
+  opacity: 50%;
+  font-size: 15px;
 }
 
 input,
@@ -2519,5 +2545,33 @@ textarea {
 #smooth-wrapper {
   position: relative;
   z-index: 1;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999999;
+  pointer-events: none;
+}
+.transition .transition-row {
+  flex: 1;
+  display: flex;
+}
+.transition .transition-row.row-1 .block {
+  transform-origin: top;
+}
+.transition .transition-row.row-2 .block {
+  transform-origin: bottom;
+}
+.transition .transition-row .block {
+  flex: 1;
+  background-color: var(--color-secondary);
+  transform: scaleY(1);
+  will-change: transform;
 }
 /*# sourceMappingURL=main.css.map */

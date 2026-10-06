@@ -4,10 +4,11 @@ import Youtube from './components/Youtube.js';
 import Cursor from './components/Cursor.js';
 import Scroller from './components/Scroller.js';
 import Modale from './components/Modale.js';
-// import Form from './components/Form.js';
+import Form from './components/Form.js';
 import Grid from './components/Grid.js';
 import ImgHover from './components/ImgHover.js';
 import Header from './components/Header.js';
+import Transition from './components/Transition.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -18,10 +19,11 @@ export default class ComponentFactory {
       Cursor,
       Scroller,
       Modale,
-      // Form,
+      Form,
       Grid,
       ImgHover,
       Header,
+      Transition,
     };
     this.init();
   }

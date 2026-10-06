@@ -9,6 +9,7 @@ export default class Carousel {
     const swiper = new Swiper(this.element, {
       pagination: {
         el: '.swiper-pagination',
+        type: 'fraction',
       },
     });
   }

@@ -67,7 +67,7 @@ export default class Scroller {
         pinSpacing: false,
         start: '0 10%',
         end: '90% 70%',
-        markers: true,
+        // markers: true,
       });
     }
   }

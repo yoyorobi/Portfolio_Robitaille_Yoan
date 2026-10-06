@@ -14,6 +14,24 @@
 <body data-component="Scrolly">
     <div class="cursor" data-component="Cursor"></div>
 
+    <div class="transition" data-component="Transition">
+        <div class="transition-row row-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="transition-row row-2">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+
+
 
     <header class="header" data-component="Header" data-always-show>
         <div class="wrapper">
@@ -65,15 +83,16 @@
 
             <!-- 
         mettre background sur texte en hover oranges
-        Enlever le sroller end sur fiche projets
+        /// Enlever le sroller end sur fiche projets
         Tags dans 02 préparation du visuel
-        02 changer les boutons de carousell et autoplay maybe
-        changer opacité du grid 
+        ///  02 changer les boutons de carousell et autoplay maybe
+        /// changer opacité du grid 
         bordure bas sur photo a propos
         Sur vidéo de vélo et auto le son en fade in
         sur mobile rajouter padding sur hero
         à propos, sur grandeur lapotop mettre photo a droite et texte en bas
         descendre gtr
+        préparation visuel pixelisé
 
         -->
 
@@ -132,9 +151,9 @@
                             </div>
                         </div>
                         <div class="formulaire">
-                            <form action="https://api.web3forms.com/submit" class="form" method="POST">
-                                <input type="hidden" name="access_key" value="99780f1c-9a85-460d-a94c-e8c1e489f5ff" />
-                                <input type="hidden" name="from_name" />
+                            <form action="https://api.web3forms.com/submit" class="form" method="POST" data-component="Form">
+                                <input type="hidden" name="access_key" value="f0edfa54-b0f7-44d5-a2d0-5180b191044c" />
+                                <input type="hidden" name="from_name" value="Portfolio" />
                                 <div class="form__body">
                                     <fieldset class="grid">
                                         <div class="fullname">
@@ -159,7 +178,6 @@
                                         </div>
                                     </fieldset>
                                 </div>
-                                <input type="hidden" name="redirect" value="https://web3forms.com/success" />
                                 <button class="submit" type="submit">
                                     Envoyer
                                     <svg class="icon icon--sm">

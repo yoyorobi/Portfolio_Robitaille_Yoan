@@ -111,7 +111,8 @@
     // Autocomplete
     &::placeholder {
         color: var(--color-primary);
-        opacity: 75%;
+        opacity: 50%;
+        font-size: 15px;
     }
 }
 input,
