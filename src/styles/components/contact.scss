@@ -1,6 +1,144 @@
+/*====================================================================================================================================
+======== CONTACT ===========
+====================================================================================================================================*/
 .contact {
-    padding-top: 100px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .info_form {
+        display: grid;
+        grid-template-columns: 1fr 1.7fr;
+    }
 }
 
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .coordonne {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .coordo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .social {
+                display: flex;
+                gap: 10px;
+                padding: 10px 20px;
+                border-bottom: 3px solid var(--color-border);
+                width: fit-content;
+                font-size: var(--font-size-content);
+            }
+        }
+    }
+    .socials {
+        .socialisation {
+            display: flex;
+            gap: 10px;
+            .social {
+                list-style-type: none;
+                padding: 10px 10px;
+                border-bottom: 2px solid var(--color-border);
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/*====================================================================================================================================
+======== FORMULAIRE ===========
+====================================================================================================================================*/
+
 .formulaire {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    --input-radius: 3px;
+    --input-padding: 1em;
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+    .grid {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.input__label {
+    display: block;
+    font-family: var(--font-tertiary);
+    font-size: 22px;
+}
+.input__element {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    // box-shadow: ;
+    cursor: pointer;
+    font-family: inherit;
+    padding: var(--input-padding);
+    outline: none;
+    width: 100%;
+
+    &:-webkit-autofill,
+    &-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 2px var(--color-white) !important; // fonctionne ish
+        -webkit-text-fill-color: inherit !important;
+    }
+
+    // hover
+    &:hover,
+    + .input__label:hover::before {
+        -webkit-box-shadow: inset 0 0 0 2px var(--color-border) !important; // fonctionne ish
+    }
+
+    //focus
+    &:focus,
+    &:-webkit-autofill:focus,
+    &:focus + .input__label::before {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: inset 0 0 0 2px var(--color-border) !important; // fonctionne ish
+    }
+
+    // Autocomplete
+    &::placeholder {
+        color: var(--color-primary);
+        opacity: 75%;
+    }
+}
+input,
+textarea {
+    color: var(--color-primary);
+    caret-color: var(--color-primary);
+}
+.fullname {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.textarea {
+    .input__element {
+        resize: vertical;
+        height: 150px;
+    }
+}
+
+.submit {
+    background: none;
+    color: var(--color-primary);
+    border: none;
+    font-family: var(--font-tertiary);
+    font-size: 24px;
+    align-self: flex-end;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-primary);
 }

@@ -3,84 +3,97 @@
 <section class="contact">
     <div class="wrapper">
         <h1>Me contacter</h1>
-        <div class="infos">
-            <div class="coordonne">
-                <h2>Mes coordonnées</h2>
-                <div class="coordo">
-                    <a href="mailto:yoan.robitaille@hotmail.com">
-                        <li class="social">
-                            <div class="social_icon">[@]</div>
-                            <div class="nom">yoan.robitaille@hotmail.com</div>
-                        </li>
-                    </a>
-                    <a href="tel:+4385057851">
-                        <li class="social">
-                            <div class="social_icon">[tel]</div>
-                            <div class="nom">(438) 505-7851</div>
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="social">
-                            <div class="social_icon">[cv]</div>
-                            <div class="nom">Curriculm vitae</div>
-                        </li>
-                    </a>
+        <div class="info_form">
+            <div class="infos">
+                <div class="coordonne">
+                    <h2>Mes coordonnées</h2>
+                    <div class="coordo">
+                        <a href="mailto:yoan.robitaille@hotmail.com">
+                            <li class="social">
+                                <div class="social_icon">[@]</div>
+                                <div class="nom">yoan.robitaille@hotmail.com</div>
+                            </li>
+                        </a>
+                        <a href="tel:+4385057851">
+                            <li class="social">
+                                <div class="social_icon">[tel]</div>
+                                <div class="nom">(438) 505-7851</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[cv]</div>
+                                <div class="nom">Curriculm vitae</div>
+                            </li>
+                        </a>
+                    </div>
+                </div>
+                <div class="socials">
+                    <h3>Mes réseaux sociaux</h3>
+                    <div class="socialisation">
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[in]</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[gh]</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[ig]</div>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="social">
+                                <div class="social_icon">[yt]</div>
+                            </li>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="socials">
-                <h3>Mes réseaux sociaux</h3>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[in]</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[gh]</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[ig]</div>
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="social">
-                        <div class="social_icon">[yt]</div>
-                    </li>
-                </a>
+            <div class="formulaire">
+                <form action="https://api.web3forms.com/submit" class="form" method="POST">
+                    <input type="hidden" name="access_key" value="99780f1c-9a85-460d-a94c-e8c1e489f5ff" />
+                    <input type="hidden" name="from_name" />
+                    <div class="form__body">
+                        <fieldset class="grid">
+                            <div class="fullname">
+                                <div class="input">
+                                    <label class="input__label" for="fname">Prénom*</label>
+                                    <input class="input__element" type="text" name="fname" placeholder="ex.: Yoan" required />
+                                </div>
+                                <div class="input">
+                                    <label class="input__label" for="lname">Nom*</label>
+                                    <input class="input__element" type="text" name="lname" placeholder="ex.: Robitaille" required />
+                                </div>
+                            </div>
+
+                            <div class="input">
+                                <label class="input__label" for="email">Adressse courriel*</label>
+                                <input class="input__element" type="email" name="email" placeholder="nom@courriel.com" required />
+                            </div>
+
+                            <div class="input textarea u-grid-fullwidth">
+                                <label for="comment" class="input__label">Message*</label>
+                                <textarea class="input__element" name="message" placeholder="Votre message" required></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+                    <button class="submit" type="submit">
+                        Envoyer
+                        <svg class="icon icon--sm">
+                            <use xlink:href="#icon-Arrow"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
-        </div>
-        <div class="formulaire">
-            <form action="https://api.web3forms.com/submit" class="form" method="POST">
-                <input type="hidden" name="access_key" value="99780f1c-9a85-460d-a94c-e8c1e489f5ff" />
-                <input type="hidden" name="from_name" />
-
-                <div class="input">
-                    <label class="input__label" for="fullname">Votre nom complet</label>
-                    <input class="input__element" type="text" name="fullname" placeholder="ex.: Yoan Robitaille" required />
-                </div>
-
-                <div class="input">
-                    <label class="input__label" for="email">Courriel</label>
-                    <input class="input__element" type="email" name="email" placeholder="yoan.robitaille@hotmail.com" required />
-                </div>
-
-                <div class="input textarea u-grid-fullwidth">
-                    <label for="comment" class="input__label">Message</label>
-                    <textarea class="input__element" name="message" placeholder="Votre message" required></textarea>
-                </div>
-
-                <input type="hidden" name="redirect" value="https://web3forms.com/success" />
-                <button type="submit">
-                    Envoyer
-                    <svg class="icon icon--sm">
-                        <use xlink:href="#icon-Arrow"></use>
-                    </svg>
-                </button>
-            </form>
         </div>
     </div>
 </section>
+<hr class="hr_primary" />
 
 {% include '_partials/_footer.html' %}

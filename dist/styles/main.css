@@ -2370,8 +2370,141 @@ img.swipeimage {
 /*====================================================================================================================================
 ======== CURSOR ===========
 ====================================================================================================================================*/
+/*====================================================================================================================================
+======== CONTACT ===========
+====================================================================================================================================*/
 .contact {
-  padding-top: 100px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+.contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact .info_form {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infos .coordonne {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.infos .coordonne .coordo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.infos .coordonne .coordo .social {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 3px solid var(--color-border);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: var(--font-size-content);
+}
+.infos .socials .socialisation {
+  display: flex;
+  gap: 10px;
+}
+.infos .socials .socialisation .social {
+  list-style-type: none;
+  padding: 10px 10px;
+  border-bottom: 2px solid var(--color-border);
+  font-size: 22px;
+}
+
+/*====================================================================================================================================
+======== FORMULAIRE ===========
+====================================================================================================================================*/
+.formulaire .form {
+  display: flex;
+  flex-direction: column;
+}
+.formulaire {
+  --input-radius: 3px;
+  --input-padding: 1em;
+}
+.formulaire fieldset {
+  border: none;
+  padding: 0;
+}
+.formulaire .grid {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.input__label {
+  display: block;
+  font-family: var(--font-tertiary);
+  font-size: 22px;
+}
+
+.input__element {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  font-family: inherit;
+  padding: var(--input-padding);
+  outline: none;
+  width: 100%;
+}
+.input__element:-webkit-autofill, .input__element-webkit-autofill:active {
+  -webkit-box-shadow: inset 0 0 0 2px var(--color-white) !important;
+  -webkit-text-fill-color: inherit !important;
+}
+.input__element:hover,
+.input__element + .input__label:hover::before {
+  -webkit-box-shadow: inset 0 0 0 2px var(--color-border) !important;
+}
+.input__element:focus, .input__element:-webkit-autofill:focus, .input__element:focus + .input__label::before {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 0 2px var(--color-border) !important;
+}
+.input__element::-moz-placeholder {
+  color: var(--color-primary);
+  opacity: 75%;
+}
+.input__element::placeholder {
+  color: var(--color-primary);
+  opacity: 75%;
+}
+
+input,
+textarea {
+  color: var(--color-primary);
+  caret-color: var(--color-primary);
+}
+
+.fullname {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.textarea .input__element {
+  resize: vertical;
+  height: 150px;
+}
+
+.submit {
+  background: none;
+  color: var(--color-primary);
+  border: none;
+  font-family: var(--font-tertiary);
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-primary);
 }
 
 #cursor-grid {

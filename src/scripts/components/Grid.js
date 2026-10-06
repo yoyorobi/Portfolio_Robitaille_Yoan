@@ -14,6 +14,7 @@ export default class Grid {
       fadeDuration: 350, // durée (ms) du fondu de sortie
       clickPulse: false, // onde au clic
       pulseSpeed: 450, // vitesse de l'onde (px/s)
+      strokeOpacity: 0.4, // opacité des contours (0 à 1)
       fillOpacity: 0, // léger remplissage des cellules (0 = aucun)
     });
   }
@@ -28,6 +29,7 @@ function createCursorGrid(canvas, options = {}) {
     fadeDuration: 350, // durée (ms) du fondu de sortie
     clickPulse: false, // onde au clic
     pulseSpeed: 450, // vitesse de l'onde (px/s)
+    strokeOpacity: 0.4, // opacité des contours (0 à 1)
     fillOpacity: 0.0, // léger remplissage des cellules (0 = aucun)
     ...options,
   };
@@ -145,8 +147,10 @@ function createCursorGrid(canvas, options = {}) {
         ctx.globalAlpha = v * opts.fillOpacity;
         ctx.fillRect(x, y, s - opts.lineWidth, s - opts.lineWidth);
       }
-      ctx.globalAlpha = v;
-      ctx.strokeRect(x, y, s - opts.lineWidth, s - opts.lineWidth);
+      if (opts.strokeOpacity > 0) {
+        ctx.globalAlpha = v * opts.strokeOpacity;
+        ctx.strokeRect(x, y, s - opts.lineWidth, s - opts.lineWidth);
+      }
     }
     ctx.globalAlpha = 1;
   }
