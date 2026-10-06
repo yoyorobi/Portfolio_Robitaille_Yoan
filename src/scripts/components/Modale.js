@@ -6,7 +6,6 @@ export default class Modale {
     this.init();
   }
   init() {
-    // console.log('modale');
     const images = document.querySelectorAll('.gallery img');
     const modal = document.querySelector('.modal');
     const modalImg = document.querySelector('.modalImg');
