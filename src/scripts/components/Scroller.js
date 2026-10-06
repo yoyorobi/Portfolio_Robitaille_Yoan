@@ -31,13 +31,12 @@ export default class Scroller {
   }
 
   initScrollTo(e) {
-    console.log('coucou');
     e.preventDefault();
     const target = document.querySelector('#projets');
     if (target) {
       this.scroller.scrollTo('#projets', true, 'top top');
     } else {
-      window.location.href = '/index.html#projets';
+      window.location.href = './index.html#projets';
     }
   }
 
