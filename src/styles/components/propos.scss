@@ -40,6 +40,7 @@
         .media {
             height: 502px;
             width: 486px;
+            border-bottom: 4px solid var(--color-border);
             &.desktop {
                 @media (width <= $breakpoint-md) {
                     display: none;
@@ -256,6 +257,7 @@
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         gap: 20px;
+
         .card {
             display: flex;
             flex-direction: column;
@@ -271,9 +273,15 @@
         }
         .card:nth-child(2) {
             grid-column: span 4;
+            img {
+                object-position: 100% 80%;
+            }
         }
         .card:nth-child(3) {
             grid-column: span 3;
+            img {
+                object-position: 100% 47%;
+            }
         }
 
         // Ligne 2 — 2fr / 1.5fr / 1fr → span 4 / 3 / 2
@@ -308,6 +316,9 @@
         }
         .gallerie1 {
             grid-template-columns: 1fr;
+            .content {
+                margin-left: 16px;
+            }
             .card {
                 grid-column: span 1 !important;
             }

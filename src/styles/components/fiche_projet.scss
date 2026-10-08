@@ -246,14 +246,20 @@
         }
     }
     .retour {
+        padding-bottom: 5px;
+        border-bottom: var(--color-primary) 2px solid;
         display: flex;
-        gap: 10px;
         align-items: center;
-        color: var(--color-secondary);
+        gap: 10px;
+        align-self: flex-start;
+        transition: all 0.3s $ease-out-expo;
         h3 {
-            color: var(--color-secondary);
             font-size: 32px;
             font-weight: 500;
+        }
+        &:hover {
+            gap: 20px;
+            border-color: var(--color-secondary);
         }
     }
 }

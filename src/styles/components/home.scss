@@ -52,6 +52,11 @@
             align-items: center;
             gap: 10px;
             align-self: flex-start;
+            transition: all 0.3s $ease-out-expo;
+            &:hover {
+                gap: 20px;
+                border-color: var(--color-secondary);
+            }
         }
         .media {
             width: 426px;
