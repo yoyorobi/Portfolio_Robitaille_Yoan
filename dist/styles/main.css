@@ -1448,7 +1448,6 @@ a.disabled {
   list-style-type: none;
   display: flex;
   gap: 10px;
-  font-size: 18px;
   font-weight: 500;
   border-bottom: var(--color-border) 3px solid;
   padding: 10px 20px;
@@ -1458,6 +1457,10 @@ a.disabled {
     width: -moz-fit-content;
     width: fit-content;
   }
+}
+.footer .wrapper .socials li .social_icon,
+.footer .wrapper .socials li .nom {
+  font-size: 18px;
 }
 .footer .wrapper .credit {
   display: flex;

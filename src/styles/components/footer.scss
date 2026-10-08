@@ -24,12 +24,15 @@
                 list-style-type: none;
                 display: flex;
                 gap: 10px;
-                font-size: 18px;
                 font-weight: 500;
                 border-bottom: var(--color-border) 3px solid;
                 padding: 10px 20px;
                 @media (width <= $breakpoint-sm) {
                     width: fit-content;
+                }
+                .social_icon,
+                .nom {
+                    font-size: 18px;
                 }
             }
         }
